@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:midterm_project/pages/pagModelFunc.dart';
 
 class GetStarted extends StatelessWidget {
   @override
@@ -7,111 +8,13 @@ class GetStarted extends StatelessWidget {
           child: IntroductionScreen(
         pages: [
           PageViewModel(
-            title: "kcal",
-            body: "Eat Healthy",
-            image: Center(
-              child: Image.asset("assets/picture1.png"),
-            ),
-            decoration: const PageDecoration(
-              titleTextStyle: TextStyle(
-                  color: Colors.green,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 40.0,
-                  fontFamily: "BalooBhai2"),
-              bodyTextStyle:
-                  TextStyle(fontWeight: FontWeight.w700, fontSize: 40.0),
-            ),
-            footer: ElevatedButton(
-              onPressed: () {
-                // On button presed
-              },
-              child: const Text(
-                'Get Started',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 20.0,
-                    fontFamily: "BalooBhai2"),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.red[200],
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-              ),
-            ),
-          ),
+              titleWidget: Title(), bodyWidget: PageModel1(), footer: Button()),
           PageViewModel(
-            title: "kcal",
-            body: "Healthy Recipes",
-            image: Center(
-              child: Image.asset("assets/picture2.png"),
-            ),
-            decoration: const PageDecoration(
-              titleTextStyle: TextStyle(
-                  color: Colors.green,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 40.0,
-                  fontFamily: "BalooBhai2"),
-              bodyTextStyle:
-                  TextStyle(fontWeight: FontWeight.w700, fontSize: 40.0),
-            ),
-            footer: ElevatedButton(
-              onPressed: () {
-                // On button presed
-              },
-              child: const Text(
-                'Get Started',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 20.0,
-                    fontFamily: "BalooBhai2"),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.red[200],
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-              ),
-            ),
-          ),
+              titleWidget: Title(), bodyWidget: PageModel2(), footer: Button()),
           PageViewModel(
-            title: "kcal",
-            body: "Track your Health",
-            image: Center(
-              child: Image.asset(
-                "assets/picture3.png"
-              ),
-            ),
-            decoration: const PageDecoration(
-              titleTextStyle: TextStyle(
-                  color: Colors.green,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 40.0,
-                  fontFamily: "BalooBhai2"),
-              bodyTextStyle:
-                  TextStyle(fontWeight: FontWeight.w700, fontSize: 40.0),
-            ),
-            footer: ElevatedButton(
-              onPressed: () {
-                // On button presed
-              },
-              child: const Text(
-                'Get Started',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 20.0,
-                    fontFamily: "BalooBhai2"),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.red[200],
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-              ),
-            ),
+            titleWidget: Title(),
+            bodyWidget: PageModel3(),
+            footer: Button(),
           ),
         ],
         showSkipButton: false,
@@ -136,4 +39,81 @@ class GetStarted extends StatelessWidget {
         //   )
         // ),
       ));
+}
+
+class Title extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text("kcal",
+          style: TextStyle(
+            fontFamily: "Mallanna",
+            fontSize: 40,
+            color: Colors.green,
+            fontWeight: FontWeight.w700,
+          )),
+    );
+  }
+}
+
+class Button extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          child: SizedBox(
+            width: 300,
+            height: 60,
+            child: ElevatedButton(
+              onPressed: () {
+                // On button presed
+              },
+              child: const Text(
+                'Get Started',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20.0,
+                    fontFamily: "BalooBhai2"),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red[200],
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+              ),
+            ),
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.only(top: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "Already Have An Account?",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: "BalooBhai2",
+                    color: Colors.grey),
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 10.0),
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Text(
+                  'Login',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.green),
+                ),
+              )
+            ],
+          ),
+        ),
+      ],
+    );
+  }
 }

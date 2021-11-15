@@ -67,11 +67,13 @@ flutter:
   # example:
 
   fonts:
-    - family: BalooBhai2
+    - family: DuruSans
       fonts:
-        - asset: fonts/BalooBhai2-Medium.ttf
+        - asset: fonts/DuruSans-Regular.ttf
 
-
+    - family: Mallanna
+      fonts:
+        - asset: fonts/Mallanna-Regular.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
