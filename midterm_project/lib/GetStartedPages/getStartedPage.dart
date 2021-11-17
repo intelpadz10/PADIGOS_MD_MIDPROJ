@@ -1,6 +1,12 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:midterm_project/pages/pagModelFunc.dart';
+import 'package:midterm_project/GetStartedPages/pagModelFunc.dart';
+
+import 'package:midterm_project/GetStartedPages/loginPage.dart';
+import 'package:midterm_project/Home/bottomMenu.dart';
+
+import 'loginPage.dart';
 
 class GetStarted extends StatelessWidget {
   @override
@@ -67,7 +73,10 @@ class Button extends StatelessWidget {
             height: 60,
             child: ElevatedButton(
               onPressed: () {
-                // On button presed
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new HomePage()));
               },
               child: const Text(
                 'Get Started',
@@ -75,7 +84,7 @@ class Button extends StatelessWidget {
                     color: Colors.white,
                     fontWeight: FontWeight.w700,
                     fontSize: 20.0,
-                    fontFamily: "BalooBhai2"),
+                    fontFamily: "Mallanna"),
               ),
               style: ElevatedButton.styleFrom(
                 primary: Colors.red[200],
@@ -90,25 +99,32 @@ class Button extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                "Already Have An Account?",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "BalooBhai2",
-                    color: Colors.grey),
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: 10.0),
-              ),
-              GestureDetector(
-                onTap: () {},
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.green),
-                ),
+              Text.rich(
+                TextSpan(
+                    text: 'Already Have An Account?',
+                    style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "BalooBhai2",
+                        color: Colors.grey),
+                    children: <InlineSpan>[
+                      TextSpan(
+                        text: 'Login',
+                        style: const TextStyle(
+                          color: Colors.green,
+                          decoration: TextDecoration.underline,
+                          decorationStyle: TextDecorationStyle.wavy,
+                        ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Navigator.push(
+                                context,
+                                new MaterialPageRoute(
+                                    builder: (context) => new Login()));
+                            print('Login Text Clicked');
+                          },
+                      ),
+                    ]),
               )
             ],
           ),

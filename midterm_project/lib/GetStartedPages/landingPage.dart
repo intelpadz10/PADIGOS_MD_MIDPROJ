@@ -25,7 +25,7 @@ class LandingPage extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 60,
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'BalooBhai2',
+                        fontFamily: 'Mallanna',
                       ),
                     ),
                   ),
