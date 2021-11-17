@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:midterm_project/Home/favoritesPage.dart';
+import 'package:midterm_project/Home/bottomMenu.dart';
+import 'package:midterm_project/pages/getStartedPage.dart';
 
 class Login extends StatelessWidget {
   @override
@@ -18,7 +19,8 @@ class Login extends StatelessWidget {
         centerTitle: true,
         leading: TextButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/getStarted');
+            Navigator.push(context,
+                new MaterialPageRoute(builder: (context) => new GetStarted()));
           },
           icon: Icon(
             Icons.arrow_left_rounded,
@@ -58,7 +60,7 @@ class LoginUser extends StatelessWidget {
                   padding: EdgeInsets.all(10.0),
                   child: TextField(
                     decoration: const InputDecoration(
-                      labelText: 'Password',
+                        labelText: 'Password',
                         border: OutlineInputBorder(),
                         hintText: 'Enter password'),
                   ),
@@ -68,7 +70,11 @@ class LoginUser extends StatelessWidget {
                   height: 50,
                   width: 200,
                   child: ElevatedButton(
-                      onPressed: () {Navigator.push(context, new MaterialPageRoute(builder: (context) => new FavePages()));
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (context) => new HomePage()));
                       },
                       child: Text("Login"),
                       style: ElevatedButton.styleFrom(

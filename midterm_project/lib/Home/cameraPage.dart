@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class Camera extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.grey[50],
         title: const Text(
-          'Home',
+          'Camera',
           style: TextStyle(color: Colors.black),
         ),
         elevation: 0,
@@ -18,7 +18,7 @@ class Home extends StatelessWidget {
         children: <Widget>[
           Container(
             child: Center(
-              child: Text('Temporary Home',
+              child: Text('Temporary Camera',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 40,

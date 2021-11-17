@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:midterm_project/foodChoices/cookies.dart';
 // import 'package:flutter_application_kcalnutritionapp/layout/defaultLayout.dart';
 
-class Search extends StatelessWidget {
+class SearchFaves extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +15,7 @@ class Search extends StatelessWidget {
                 (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
                 new SliverAppBar(
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.grey[50],
                   title: Text(
                     'Favorites',
                     style: TextStyle(color: Colors.black, fontSize: 15),
@@ -87,7 +88,7 @@ class FoodChoices extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) => new Search()));
+                    new MaterialPageRoute(builder: (context) => new Cookies()));
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -121,8 +122,8 @@ class FoodChoices extends StatelessWidget {
             height: 70,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) => new Search()));
+                // Navigator.push(context,
+                //     new MaterialPageRoute(builder: (context) => new Search()));
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -161,8 +162,8 @@ class FoodChoices extends StatelessWidget {
             height: 70,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) => new Search()));
+                // Navigator.push(context,
+                //     new MaterialPageRoute(builder: (context) => new Search()));
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -196,8 +197,8 @@ class FoodChoices extends StatelessWidget {
             height: 70,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) => new Search()));
+                // Navigator.push(context,
+                //     new MaterialPageRoute(builder: (context) => new Search()));
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -236,8 +237,8 @@ class FoodChoices extends StatelessWidget {
             height: 70,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) => new Search()));
+                // Navigator.push(context,
+                //     new MaterialPageRoute(builder: (context) => new Search()));
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -271,8 +272,8 @@ class FoodChoices extends StatelessWidget {
             height: 70,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    new MaterialPageRoute(builder: (context) => new Search()));
+                // Navigator.push(context,
+                //     new MaterialPageRoute(builder: (context) => new Search()));
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -314,8 +315,8 @@ class FoodChoices extends StatelessWidget {
               height: 70,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      new MaterialPageRoute(builder: (context) => new Search()));
+                  // Navigator.push(context,
+                  //     new MaterialPageRoute(builder: (context) => new Search()));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

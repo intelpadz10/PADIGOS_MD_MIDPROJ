@@ -1,28 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:midterm_project/GetStartedPages/landingPage.dart';
-import 'GetStartedPages/getStartedPage.dart';
-import 'Home/favoritesPage.dart';
-
-
-// void main() => runApp(MaterialApp(
-//   debugShowCheckedModeBanner: false,
-//   initialRoute: "/getStarted",
-//   routes:{
-//     '/':(context) => LandingPage(),
-//     '/getStarted':(context) => GetStarted(),
-//     '/login':(context) => Login(),
-//     '/favorites':(context) => FavePages(),
-//   }
-// ));
+import 'package:midterm_project/pages/landingPage.dart';
+import 'pages/getStartedPage.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget{
-  @override 
-
-  Widget build(BuildContext context){
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: splashScreen(),
@@ -31,7 +17,7 @@ class MyApp extends StatelessWidget{
 }
 
 class splashScreen extends StatefulWidget {
-  const splashScreen({ Key? key }) : super(key: key);
+  const splashScreen({Key? key}) : super(key: key);
 
   @override
   _splashScreenState createState() => _splashScreenState();
@@ -39,12 +25,14 @@ class splashScreen extends StatefulWidget {
 
 class _splashScreenState extends State<splashScreen> {
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    Timer(Duration(seconds: 5),(){
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) => GetStarted()));
+    Timer(Duration(seconds: 5), () {
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: (_) => GetStarted()));
     });
   }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,

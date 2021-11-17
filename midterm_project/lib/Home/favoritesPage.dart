@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:midterm_project/Home/searchPage.dart';
+import 'package:midterm_project/Home/searchPageFavorites.dart';
 // import 'package:flutter_application_kcalnutritionapp/layout/defaultLayout.dart';
 
 class FavePages extends StatelessWidget {
@@ -15,7 +15,7 @@ class FavePages extends StatelessWidget {
                 (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
                 new SliverAppBar(
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.grey[50],
                   title: Text(
                     'Favorites',
                     style: TextStyle(color: Colors.black, fontSize: 15),
@@ -92,27 +92,27 @@ class FoodsBar extends StatelessWidget {
       ),
       Container(
         child: Text(
-        'No Foods Found',
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-          fontFamily: "Mallanna",
+          'No Foods Found',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Mallanna",
+          ),
         ),
-      ),
       ),
       Container(
         width: 300,
         child: Text(
-        "You don't save any food. Go ahead, search and save your favorite food.",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          fontFamily: "Mallanna",
-          color: Colors.grey,
+          "You don't save any food. Go ahead, search and save your favorite food.",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Mallanna",
+            color: Colors.grey,
+          ),
         ),
-      ),
       ),
       Container(
         child: Button(),
@@ -140,27 +140,27 @@ class RecipesBar extends StatelessWidget {
       ),
       Container(
         child: Text(
-        'No Recipes Found',
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-          fontFamily: "Mallanna",
+          'No Recipes Found',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Mallanna",
+          ),
         ),
-      ),
       ),
       Container(
         width: 300,
         child: Text(
-        "You don't save any recipes. Go ahead, search and save your favorite recipes.",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          fontSize: 19,
-          fontWeight: FontWeight.bold,
-          fontFamily: "Mallanna",
-          color: Colors.grey,
+          "You don't save any recipes. Go ahead, search and save your favorite recipes.",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 19,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Mallanna",
+            color: Colors.grey,
+          ),
         ),
-      ),
       ),
       Container(
         child: Button(),
@@ -179,7 +179,11 @@ class Button extends StatelessWidget {
             width: 300,
             height: 60,
             child: ElevatedButton(
-                onPressed: () {Navigator.push(context, new MaterialPageRoute(builder: (context) => new Search()));
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new SearchFaves()));
               },
               child: const Text(
                 'Search',

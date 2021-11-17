@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:midterm_project/GetStartedPages/pagModelFunc.dart';
+import 'package:midterm_project/pages/pagModelFunc.dart';
 
-import 'package:midterm_project/GetStartedPages/loginPage.dart';
+import 'package:midterm_project/pages/loginPage.dart';
 import 'package:midterm_project/Home/bottomMenu.dart';
 
 import 'loginPage.dart';
@@ -29,21 +29,6 @@ class GetStarted extends StatelessWidget {
         skip: const Text("Skip"),
         done: Text('Read', style: TextStyle(fontWeight: FontWeight.w600)),
         onDone: () => () {},
-
-        //     showSkipButton: true,
-        //     skip: const Icon(Icons.skip_next),
-        //     next: const Icon(Icons.next),
-        //     done: const Text("Done", style: TextStyle(fontWeight: FontWeight.w600)),
-        //     dotsDecorator: DotsDecorator(
-        //     size: const Size.square(10.0),
-        //     activeSize: const Size(20.0, 10.0),
-        //     activeColor: theme.accentColor,
-        //     color: Colors.black26,
-        //     spacing: const EdgeInsets.symmetric(horizontal: 3.0),
-        //     activeShape: RoundedRectangleBorder(
-        //     borderRadius: BorderRadius.circular(25.0)
-        //   )
-        // ),
       ));
 }
 

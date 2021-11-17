@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:midterm_project/Home/favoritesPage.dart';
 import 'package:midterm_project/Home/homePage.dart';
-import 'package:midterm_project/Home/searchPage.dart';
+import 'package:midterm_project/Home/profilePage.dart';
+import 'package:midterm_project/Home/searchPageHome.dart';
+
+import 'cameraPage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -9,17 +12,15 @@ class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _MyStatefulWidgetState();
 }
+
 class _MyStatefulWidgetState extends State<HomePage> {
   int _selectedIndex = 0;
-  // static const TextStyle optionStyle =
-  //     TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
-    
     Home(),
-    Home(),
-    Home(),
+    SearchHome(),
+    Camera(),
     FavePages(),
-    Home(),
+    Profile(),
   ];
 
   void _onItemTapped(int index) {
@@ -37,9 +38,9 @@ class _MyStatefulWidgetState extends State<HomePage> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         unselectedIconTheme: IconThemeData(
-        color: Colors.grey,
-  ),
-  unselectedItemColor: Colors.green,
+          color: Colors.grey,
+        ),
+        unselectedItemColor: Colors.green,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -48,7 +49,6 @@ class _MyStatefulWidgetState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Search',
-            
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.camera_alt_outlined),

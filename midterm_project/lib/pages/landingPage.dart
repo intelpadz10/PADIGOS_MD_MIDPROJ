@@ -23,7 +23,7 @@ class LandingPage extends StatelessWidget {
                       'kcal',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 60,
+                        fontSize: 80,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Mallanna',
                       ),
@@ -35,7 +35,7 @@ class LandingPage extends StatelessWidget {
                       'ZUAMICA',
                       style: TextStyle(
                         color: Colors.grey.withOpacity(0.5),
-                        fontSize: 30,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'BalooBhai2',
                       ),
