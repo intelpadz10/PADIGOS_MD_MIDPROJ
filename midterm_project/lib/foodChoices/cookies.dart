@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:midterm_project/Home/searchPageFavorites.dart';
+import 'package:midterm_project/Home/searchFood.dart';
 
 class Cookies extends StatelessWidget {
   @override
@@ -17,7 +17,7 @@ class Cookies extends StatelessWidget {
         leading: TextButton.icon(
           onPressed: () {
             Navigator.push(context,
-                new MaterialPageRoute(builder: (context) => new SearchFaves()));
+                new MaterialPageRoute(builder: (context) => new SearchFood()));
           },
           icon: Icon(
             Icons.arrow_left,

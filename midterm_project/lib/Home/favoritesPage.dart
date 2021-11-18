@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:midterm_project/Home/searchPageFavorites.dart';
+import 'package:midterm_project/Home/searchFood.dart';
+import 'package:midterm_project/Home/searchRecipe.dart';
 // import 'package:flutter_application_kcalnutritionapp/layout/defaultLayout.dart';
 
 class FavePages extends StatelessWidget {
@@ -115,7 +116,7 @@ class FoodsBar extends StatelessWidget {
         ),
       ),
       Container(
-        child: Button(),
+        child: FoodButton(),
       )
     ]);
   }
@@ -163,13 +164,13 @@ class RecipesBar extends StatelessWidget {
         ),
       ),
       Container(
-        child: Button(),
+        child: RecipeButton(),
       )
     ]);
   }
 }
 
-class Button extends StatelessWidget {
+class FoodButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -183,7 +184,44 @@ class Button extends StatelessWidget {
                 Navigator.push(
                     context,
                     new MaterialPageRoute(
-                        builder: (context) => new SearchFaves()));
+                        builder: (context) => new SearchFood()));
+              },
+              child: const Text(
+                'Search',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20.0,
+                    fontFamily: "Mallanna"),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red[200],
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class RecipeButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          child: SizedBox(
+            width: 300,
+            height: 60,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new SearchRecipe()));
               },
               child: const Text(
                 'Search',
