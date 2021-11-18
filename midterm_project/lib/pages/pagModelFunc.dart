@@ -9,8 +9,8 @@ class PageModel1 extends StatelessWidget {
       Container(
         margin: EdgeInsets.only(bottom: 20),
         child: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
-          child: Image.asset('assets/picture1.png', height: 200),
+          // borderRadius: BorderRadius.all(Radius.circular(20)),
+          child: Image.asset('assets/illus1.png', height: 200),
         ),
       ),
       Container(
@@ -47,8 +47,8 @@ class PageModel2 extends StatelessWidget {
       Container(
         margin: EdgeInsets.only(bottom: 20),
         child: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
-          child: Image.asset('assets/picture2.png', height: 200),
+          // borderRadius: BorderRadius.all(Radius.circular(20)),
+          child: Image.asset('assets/illus2.png', height: 200),
         ),
       ),
       Container(
@@ -85,8 +85,8 @@ class PageModel3 extends StatelessWidget {
       Container(
         margin: EdgeInsets.only(bottom: 20),
         child: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
-          child: Image.asset('assets/picture3.png', height: 200),
+          // borderRadius: BorderRadius.all(Radius.circular(20)),
+          child: Image.asset('assets/illus3.png', height: 200),
         ),
       ),
       Container(

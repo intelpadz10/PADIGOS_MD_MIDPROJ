@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:midterm_project/foodChoices/cookies.dart';
+import 'package:midterm_project/choices/cookies.dart';
 
 class FoodChoices extends StatelessWidget {
   @override
